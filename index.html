@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Damian Ciumacenco — Software Engineering student at Maynooth University. Portfolio of web development, Java, Python and UX/UI projects." />
+  <title>Damian — Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cursor { position: fixed; width: 10px; height: 10px; background: #c0172a; border-radius: 50%; pointer-events: none; z-index: 9999; left: -20px; top: -20px; transform: translate(-50%,-50%); transition: width .15s, height .15s; }
+    .cursor-ring { position: fixed; width: 34px; height: 34px; border: 1.5px solid rgba(192,23,42,0.55); border-radius: 50%; pointer-events: none; z-index: 9998; left: -20px; top: -20px; transform: translate(-50%,-50%); }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <script>
+    (function(){
+      var dot=document.getElementById('cursor'),ring=document.getElementById('cursorRing'),mx=0,my=0,rx=0,ry=0;
+      document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+      (function loop(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop);})();
+    })();
+  </script>
+
+  <nav>
+    <a href="#hero" class="nav-logo">D<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-image-wrap">
+      <img src="hero.png" alt="Robot" />
+    </div>
+    <div class="hero-text">
+      <span class="t-software">SOFTWARE</span>
+      <span class="t-engineer">ENGINEER<span class="t-dot">.</span></span>
+    </div>
+    <div class="hero-bottom">
+      <p class="hero-sub">Second-year Software Engineering student at Maynooth University. Building clean, purposeful digital experiences.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Work ↗</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm <strong>Damian</strong> — a Software Engineering student at <em>Maynooth University</em> with a background in electronics, retail, and a genuine passion for building things that look and work brilliantly.</p>
+        <p>My degree gives me a strong foundation across algorithms, data structures, UI/UX design, and web development. Outside of college I work on personal and entrepreneurial projects that sharpen my real-world skills.</p>
+        <p>I'm actively looking for <strong>software engineering internship</strong> opportunities where I can contribute, learn fast, and grow alongside a great team.</p>
+        <div style="margin-top:36px"><a href="#" class="btn-primary">Download CV ↓</a></div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-block"><div class="stat-number">2<span>nd</span></div><div class="stat-desc">Year — Maynooth University</div></div>
+        <div class="stat-block"><div class="stat-number">2<span>+</span></div><div class="stat-desc">Years Industry Experience</div></div>
+        <div class="stat-block"><div class="stat-number">IE</div><div class="stat-desc">Based in Ireland</div></div>
+        <div class="stat-block"><div class="stat-number">3<span>+</span></div><div class="stat-desc">Projects Completed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="skills">
+    <div class="section-label reveal">Skills</div>
+    <h2 class="section-title reveal">WHAT I<br>WORK WITH</h2>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">Development</div>
+        <ul class="skill-list">
+          <li>HTML5 / CSS3</li><li>JavaScript</li><li>Java</li><li>Python (learning)</li><li>React / Vite</li><li>Responsive Web Design</li>
+        </ul>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">Design & UX</div>
+        <ul class="skill-list">
+          <li>Figma</li><li>Wireframing & Prototyping</li><li>User Research</li><li>Interaction Design</li><li>Responsive Design</li><li>Design Systems</li>
+        </ul>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">Tools & Other</div>
+        <ul class="skill-list">
+          <li>VS Code</li><li>Git & GitHub</li><li>Algorithms & Data Structures</li><li>Theory of Computation</li><li>Linux / Command Line</li><li>Agile & Problem Solving</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="projects">
+  <div class="section-label reveal">Projects</div>
+  <h2 class="section-title reveal">SELECTED<br>WORK</h2>
+  <div class="projects-grid">
+    <a href="https://github.com/DamianCiumacenco/Student-tracker-Pyhton" target="_blank" class="project-card reveal">
+      <div class="project-number">01</div>
+      <div class="project-tag">Python · 2025</div>
+      <div class="project-name">Student Grade Tracker</div>
+      <p class="project-desc">A command-line application built with Python for tracking student grades and managing academic records. Features persistent JSON storage, class statistics, and letter grade conversion.</p>
+      <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">JSON</span><span class="tech-tag">OOP</span></div>
+      <div class="project-arrow">↗</div>
+    </a>
+    <a href="https://github.com/DamianCiumacenco/java-banking-app" target="_blank" class="project-card reveal">
+      <div class="project-number">02</div>
+      <div class="project-tag">Java · 2025</div>
+      <div class="project-name">Java Banking System</div>
+      <p class="project-desc">An object-oriented banking application with account management, deposits, withdrawals, and full transaction history using ArrayList. Built with core Java OOP principles.</p>
+      <div class="project-tech"><span class="tech-tag">Java</span><span class="tech-tag">OOP</span><span class="tech-tag">ArrayList</span></div>
+      <div class="project-arrow">↗</div>
+    </a>
+    <a href="https://github.com/DamianCiumacenco/study-dashboard-html" target="_blank" class="project-card reveal">
+      <div class="project-number">03</div>
+      <div class="project-tag">Web Development · 2026</div>
+      <div class="project-name">Student Dashboard</div>
+      <p class="project-desc">A responsive student dashboard built with HTML, CSS and JavaScript. Features a session counter, weekly goals display, and a clean card-based interface with CSS variables.</p>
+      <div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span></div>
+      <div class="project-arrow">↗</div>
+    </a>
+    <a href="https://drcmediagroup.com" target="_blank" class="project-card reveal">
+      <div class="project-number">04</div>
+      <div class="project-tag">Web Development · 2026</div>
+      <div class="project-name">DRC Media Website</div>
+      <p class="project-desc">Designed and built a professional agency website from scratch for DRC Media. Developed alongside a senior developer, focused on clean layout, responsive design, and smooth user experience.</p>
+      <div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span></div>
+      <div class="project-arrow">↗</div>
+    </a>
+    <div class="project-card reveal" style="background:rgba(192,23,42,0.04);border:1px dashed rgba(192,23,42,0.2)">
+      <div class="project-number" style="color:rgba(192,23,42,0.15)">05</div>
+      <div class="project-tag" style="opacity:.5">Coming Soon</div>
+      <div class="project-name" style="color:var(--grey-text)">Next Project</div>
+      <p class="project-desc" style="color:#555">Something new is in the works. Check back soon.</p>
+      <div class="project-arrow" style="color:rgba(192,23,42,0.3)">+</div>
+    </div>
+  </div>
+</section>
+
+  <div class="divider"></div>
+
+  <section id="contact">
+    <div class="section-label reveal" style="justify-content:center">Contact</div>
+    <div class="contact-big reveal">LET'S TALK</div>
+    <a href="mailto:Damian.Ciumacenco.2025@mumail.ie" class="contact-email reveal">Damian.Ciumacenco.2025@mumail.ie</a>
+    <div class="contact-links reveal">
+      <a href="https://github.com/DamianCiumacenco" target="_blank" class="contact-link">GitHub</a>
+      <a href="https://linkedin.com/in/damianciumacenco" target="_blank" class="contact-link">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Damian <span>·</span> Built with HTML, CSS & JS</p>
+    <p>Software Engineer <span>·</span> Ireland</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
